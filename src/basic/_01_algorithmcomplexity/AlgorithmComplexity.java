@@ -48,7 +48,7 @@ public class AlgorithmComplexity {
     } else {
       System.out.println("n <= 5");
     }
-    // 1 + 4 + 4 + 4
+    // 1 + 4 + 4 + 4  时间复杂度是 O(n)
     for (int i = 0; i < 4; i++) {
       System.out.println("test");
     }
@@ -104,7 +104,6 @@ public class AlgorithmComplexity {
    */
   public static void test02(int n) {
     // O(n)
-    // 1 + 3n
     for (int i = 0; i < n; i++) {
       System.out.println("test");
     }
@@ -118,7 +117,6 @@ public class AlgorithmComplexity {
     // 1 + 2n + n + 3n^2
     // 3n^2 + 3n + 1
     // O(n^2)
-    // O(n)
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < n; j++) {
         System.out.println("test");
@@ -139,6 +137,11 @@ public class AlgorithmComplexity {
       }
     }
   }
+
+  /**
+   * 时间复杂度是 O(log n)
+   * @param n   10
+   */
   public static void test06(int n) {
     // log5(n)
     // O(log n)
@@ -155,7 +158,7 @@ public class AlgorithmComplexity {
     // 1 + 3*log2(n) + 2 * nlog2(n)
     // O(nlog n)
     for (int i = 1; i < n; i = i * 2) {
-      // 1 + 3n
+      // n
       for (int j = 0; j < n; j++) {
         System.out.println("test");
       }
