@@ -1,4 +1,4 @@
-package basic.bitoperation;
+package basic._02_bitoperation;
 
 /**
  * 雪花算法
