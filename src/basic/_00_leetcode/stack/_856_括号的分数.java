@@ -74,6 +74,7 @@ public class _856_括号的分数 {
 
       }
     }
+    return  0;
   }
 
 
