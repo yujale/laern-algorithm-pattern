@@ -1,34 +1,38 @@
 package basic._06_queue;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 public class MainTest {
 
   public static void main(String[] args) {
-    testSize();
+    Queue<Object> objects = new ArrayDeque<>();
+    testQueueSize();
     System.out.println("====================================");
-    testDeQueue();
+    testQueueDeQueue();
     System.out.println("====================================");
-    testEnQueue();
+    testQueueEnQueue();
     System.out.println("====================================");
-    testIsEmpty();
+    testQueueIsEmpty();
     System.out.println("====================================");
-    testFront();
+    testQueueFront();
   }
 
 
-  public static void testSize() {
+  public static void testQueueSize() {
     NewQueue<Object> objectNewQueue = new NewQueue<>();
     objectNewQueue.enQueue("1");
     int size = objectNewQueue.size();
     System.out.println(size);
   }
 
-  public static void testIsEmpty() {
+  public static void testQueueIsEmpty() {
     NewQueue<Object> objectNewQueue = new NewQueue<>();
     boolean empty = objectNewQueue.isEmpty();
     System.out.println(empty);
   }
 
-  public static void testEnQueue() {
+  public static void testQueueEnQueue() {
     NewQueue<Object> objectNewQueue = new NewQueue<>();
     objectNewQueue.enQueue("1");
     objectNewQueue.enQueue("2");
@@ -39,7 +43,7 @@ public class MainTest {
     System.out.println(objectNewQueue.size());
   }
 
-  public static void testDeQueue() {
+  public static void testQueueDeQueue() {
     NewQueue<Object> objectNewQueue = new NewQueue<>();
     objectNewQueue.enQueue("1");
     objectNewQueue.enQueue("2");
@@ -53,7 +57,7 @@ public class MainTest {
     System.out.println(objectNewQueue.size());
   }
 
-  public static void testFront() {
+  public static void testQueueFront() {
     NewQueue<Object> objectNewQueue = new NewQueue<>();
     objectNewQueue.enQueue("1");
     objectNewQueue.enQueue("2");
