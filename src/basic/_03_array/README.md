@@ -1,4 +1,4 @@
-# 一、数字 Array
+# 一、数组 Array
 
 数组是一种顺序存储的线性表，所有元素的内存地址都是连续的
 
@@ -6,16 +6,23 @@
 int[] array = new int[]{11,22,33}
 ```
 
+![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4a02ea7e00e64fa1afab4a87405b332d~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?)
+
 - 在很多编程语言中，数组有个致命的缺点， 无法动态修改容量。
 
 - 实际开发中我们希望数组的容量是动态变化的。
 
-# 二、动态数组（Dynamic Array） 接口设计
+# 二、动态数组（Dynamic Array）
+
+动态数组是指在声明时没有确定数组大小的数组，可以根据用户需求可以自动增加或者减少数组空间，有效的利用空间。
+
+## 接口设计
 
 - size() 获取数组中元素的个数
 - isEmpty() 判断数组是否为空
 - contains(E) 查找数组中是否有元素e
-- indexOf(E) 查找数组中元素e所在的索引，如果不存在元素e，则返回-1
+- get(index) 获取指定位置的元素
+- set(index, e) 修改index位置的元素为e
 - add(index, e) 向数组中指定位置添加一个元素
 - addLast(e) 向数组末尾添加一个元素
 - addFirst(e) 向数组头部添加一个元素
@@ -23,9 +30,57 @@ int[] array = new int[]{11,22,33}
 - removeFirst() 删除数组中的第一个元素，并返回删除的元素
 - removeLast() 删除数组中的最后一个元素，并返回删除的元素
 - removeElement(e) 删除数组中的元素e
-- set(index, e) 修改index位置的元素为e
-- get(index) 获取指定位置的元素
+- indexOf(E) 查找数组中元素e所在的索引，如果不存在元素e，则返回-1
 - toString() 将数组转化为字符串
+
+```java
+public class NewArray<E> {
+
+  private int size;
+  private Object[] elements;    // 设置elements数组默认的初始化空间
+  private static final int DEFAULT_CAPACITY = 10;
+
+  public int size() {
+  }
+
+  public boolean isEmpty() {
+  }
+
+  public boolean contains(E element) {
+  }
+
+  public E get(int index) {
+  }
+
+  public E set(int index, E element) {
+  }
+
+  public void add(int index, E element) {
+  }
+
+  public void add(E element) {
+  }
+
+  public E remove(int index) {
+  }
+
+  public E removeFirst() {
+  }
+
+  public E removeLast() {
+  }
+
+  public boolean removeElement(E element) {
+  }
+
+  public int indexOf(E element) {
+  }
+
+  private E elements(int index) {
+  }
+
+}
+```
 
 # 三、动态数组的实现
 
