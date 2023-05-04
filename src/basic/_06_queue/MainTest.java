@@ -1,12 +1,8 @@
 package basic._06_queue;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
-
 public class MainTest {
 
   public static void main(String[] args) {
-    Queue<Object> objects = new ArrayDeque<>();
     testQueueSize();
     System.out.println("====================================");
     testQueueDeQueue();
